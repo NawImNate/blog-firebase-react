@@ -4,10 +4,10 @@ const app = express();
 const port = 5001;
 
 // middlewares
-app.use("/api", (req, res) => {
-  res.send("Hi");
-  console.log(`app listening on port ${port}`);
-});
+// app.use("/api", (req, res, next) => {
+//   res.send("Hi");
+//   console.log(`app listening on port ${port}`);
+// });
 
 mongoose
   .connect(
