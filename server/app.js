@@ -6,6 +6,7 @@ const app = express();
 const port = 5001;
 
 // middlewares
+app.use(express.json());
 app.use("/api/user", router);
 
 // Db config
