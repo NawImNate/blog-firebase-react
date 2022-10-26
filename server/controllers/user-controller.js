@@ -28,9 +28,8 @@ export const signup = async (req, res, next) => {
   if (existingUser) {
     return res.status(400).json({ message: "User Exists, please login" });
   }
-  // if no existing user save a new user and return json or err msg if not successful.
+  // if no existing user save a new user and return json or err msg if not successful. password encryption via hashSync function from bcryptjs
   const hashedPassword = bcrypt.hashSync(password);
-
   const user = new User({
     name,
     email,
